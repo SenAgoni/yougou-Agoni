@@ -1,1 +1,24 @@
 /**index.wxss**/
+/* 头部部分样式 */
+.header{
+  height:35px;
+  background-color: #eb4450;
+  position: relative;
+  color:#c4c4c4;
+}
+.header input{
+  background-color: #fff;
+  text-align: center;
+  font-size:12px;
+  margin:0 8px;
+  border-radius: 4px;
+}
+.header input::placeholder{
+  color:#c4c4c4;
+}
+.header .ico{
+  position: absolute;
+  top:-4px;
+  left:39%;
+}
+/* 轮播图部分样式 */
