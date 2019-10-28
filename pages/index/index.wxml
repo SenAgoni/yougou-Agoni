@@ -1,19 +1,29 @@
 <!--index.wxml-->
 <!-- 头部搜索框部分 -->
-<view class="header">
+<view class="container">
+  <view class="header">
   <icon class="iconfont iconsearch ico"></icon>
   <input placeholder="搜索"></input>
-</view>
-<!-- 轮播图部分 -->
-<view class="swiper-container">
-  <swiper indicator-dots="true"
-    autoplay="true" interval="2000" indicator-color="rgba(255, 255, 255, .3)" 
-    indicator-active-color="rgba(255, 255, 255, 1)"
-  >
-    <block wx:for="{{swiperData}}" wx:key="{{index}}">
-      <swiper-item>
+  </view>
+  <!-- 轮播图部分 -->
+  <view class="swiper-container">
+    <swiper indicator-dots="true"
+      autoplay="true" interval="2000" indicator-color="rgba(255, 255, 255, .3)" 
+      indicator-active-color="rgba(255, 255, 255, 1)"
+    >
+      <block wx:for="{{swiperData}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.image_src}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 导航栏部分 -->
+  <view class="navPhotoAll">
+    <view class="navPhoto" wx:for="{{navBar}}">
+      <view class="photo">
         <image src="{{item.image_src}}"></image>
-      </swiper-item>
-    </block>
-  </swiper>
+      </view>
+    </view>
+  </view>
 </view>

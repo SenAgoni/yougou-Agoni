@@ -22,3 +22,21 @@
   left:39%;
 }
 /* 轮播图部分样式 */
+
+/* 导航栏部分样式 */
+.navPhotoAll{
+  display: flex;
+  justify-content: space-around;
+  height:50px;
+  margin-top:20px;
+}
+.navPhotoAll .navPhoto .photo{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.navPhotoAll .navPhoto image{
+  width:65px;
+  height:65px;
+}
