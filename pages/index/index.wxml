@@ -1,9 +1,11 @@
 <!--index.wxml-->
 <!-- 头部搜索框部分 -->
 <view class="container">
-  <view class="header">
-    <icon class="iconfont iconsearch ico"></icon>
-    <input placeholder="搜索"></input>
+  <view class="search">
+     <view class="header">
+        <icon class="iconfont iconsearch"></icon>
+        搜索
+      </view>
   </view>
   <!-- 轮播图部分 -->
   <view class="swiper-container">
@@ -13,7 +15,7 @@
     >
       <block wx:for="{{swiperData}}" wx:key="{{index}}">
         <swiper-item>
-          <image src="{{item.image_src}}"></image>
+          <image src="{{item.image_src}}" mode="aspectFill"></image>
         </swiper-item>
       </block>
     </swiper>
@@ -21,29 +23,33 @@
   <!-- 导航栏部分 -->
   <view class="navPhotoAll">
     <view class="navPhoto" wx:for="{{navBar}}" wx:key="{{index}}">
-      <view class="photo">
         <navigator url="#" hover-class="navigator-hover">
-          <image src="{{item.image_src}}"></image>
+          <image mode="aspectFill" src="{{item.image_src}}"></image>
         </navigator>
-      </view>
     </view>
   </view>
   <!-- 时尚女装部分 -->
   <view wx:for="{{backgroundImg}}"
         wx:key="{{index}}">
     <view class="adverPhoto">
-      <image src="{{item.floor_title.image_src}}"></image>
+      <navigator url="#" hover-class="navigator-hover">
+          <image mode="aspectFill" src="{{item.floor_title.image_src}}"></image>
+      </navigator>
     </view>
     <view class="listPhotoAll">
       <view class="firstPhoto">
-        <image src="{{item.product_list[0].image_src}}"></image>
+        <navigator url="#" hover-class="navigator-hover">
+            <image mode="aspectFill" src="{{item.product_list[0].image_src}}"></image>
+        </navigator>
       </view>
       <view class="secondPhoto">
         <view class="listPhoto" wx:for="{{item.product_list}}"
         wx:key="{{index}}"
         wx:if="{{index>0}}"
         >
+        <navigator url="#" hover-class="navigator-hover">
           <image src="{{item.image_src}}"></image>
+        </navigator>
         </view>
       </view>
     </view>
