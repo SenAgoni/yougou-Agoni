@@ -46,7 +46,7 @@
   align-items: center;
   border-radius: 50%;
 }
-.navPhotoAll .navPhoto image{
+.navPhotoAll .navPhoto navigator image{
   width:130rpx;
   height:130rpx;
 }

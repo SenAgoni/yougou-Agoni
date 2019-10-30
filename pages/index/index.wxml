@@ -22,7 +22,9 @@
   <view class="navPhotoAll">
     <view class="navPhoto" wx:for="{{navBar}}" wx:key="{{index}}">
       <view class="photo">
-        <image src="{{item.image_src}}"></image>
+        <navigator url="#" hover-class="navigator-hover">
+          <image src="{{item.image_src}}"></image>
+        </navigator>
       </view>
     </view>
   </view>
