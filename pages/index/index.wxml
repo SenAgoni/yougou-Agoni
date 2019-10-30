@@ -2,8 +2,8 @@
 <!-- 头部搜索框部分 -->
 <view class="container">
   <view class="header">
-  <icon class="iconfont iconsearch ico"></icon>
-  <input placeholder="搜索"></input>
+    <icon class="iconfont iconsearch ico"></icon>
+    <input placeholder="搜索"></input>
   </view>
   <!-- 轮播图部分 -->
   <view class="swiper-container">
@@ -20,9 +20,29 @@
   </view>
   <!-- 导航栏部分 -->
   <view class="navPhotoAll">
-    <view class="navPhoto" wx:for="{{navBar}}">
+    <view class="navPhoto" wx:for="{{navBar}}" wx:key="{{index}}">
       <view class="photo">
         <image src="{{item.image_src}}"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 时尚女装部分 -->
+  <view wx:for="{{backgroundImg}}"
+        wx:key="{{index}}">
+    <view class="adverPhoto">
+      <image src="{{item.floor_title.image_src}}"></image>
+    </view>
+    <view class="listPhotoAll">
+      <view class="firstPhoto">
+        <image src="{{item.product_list[0].image_src}}"></image>
+      </view>
+      <view class="secondPhoto">
+        <view class="listPhoto" wx:for="{{item.product_list}}"
+        wx:key="{{index}}"
+        wx:if="{{index>0}}"
+        >
+          <image src="{{item.image_src}}"></image>
+        </view>
       </view>
     </view>
   </view>

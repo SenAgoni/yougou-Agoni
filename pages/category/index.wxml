@@ -1,0 +1,8 @@
+<!--pages/category/index.wxml-->
+<!-- 头部搜索框部分 -->
+<view class="container">
+  <view class="header">
+    <icon class="iconfont iconsearch ico"></icon>
+    <input placeholder="搜索"></input>
+  </view>
+</view>

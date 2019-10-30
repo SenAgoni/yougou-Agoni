@@ -1,0 +1,26 @@
+/* pages/category/index.wxss */
+/* 头部部分样式 */
+.header{
+  height:80rpx;
+  width:100%;
+  background-color: #eb4450;
+  position: relative;
+  color:#c4c4c4;
+}
+.header input{
+  height:70rpx;
+  background-color: #fff;
+  text-align: center;
+  font-size:12px;
+  margin:0 16rpx;
+  border-radius: 8rpx;
+}
+.header input::placeholder{
+  color:#c4c4c4;
+}
+.header .ico{
+  font-size:20px;
+  position: absolute;
+  top:-4%;
+  left:38%;
+}

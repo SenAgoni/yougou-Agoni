@@ -1,34 +1,44 @@
 /**index.wxss**/
 /* 头部部分样式 */
 .header{
-  height:35px;
+  height:80rpx;
+  width:100%;
   background-color: #eb4450;
   position: relative;
   color:#c4c4c4;
 }
 .header input{
+  height:70rpx;
   background-color: #fff;
   text-align: center;
   font-size:12px;
-  margin:0 8px;
-  border-radius: 4px;
+  margin:0 16rpx;
+  border-radius: 8rpx;
 }
 .header input::placeholder{
   color:#c4c4c4;
 }
 .header .ico{
+  font-size:20px;
   position: absolute;
-  top:-4px;
-  left:39%;
+  top:-4%;
+  left:38%;
 }
 /* 轮播图部分样式 */
-
+.swiper-container image{
+  width:100%;
+  height:100%;
+}
 /* 导航栏部分样式 */
 .navPhotoAll{
   display: flex;
   justify-content: space-around;
-  height:50px;
+  height:130rpx;
   margin-top:20px;
+  margin-bottom:15px;
+}
+.navPhotoAll .navPhoto{
+  height:130rpx;
 }
 .navPhotoAll .navPhoto .photo{
   display: flex;
@@ -37,6 +47,39 @@
   border-radius: 50%;
 }
 .navPhotoAll .navPhoto image{
-  width:65px;
-  height:65px;
+  width:130rpx;
+  height:130rpx;
+}
+/* 时尚女装部分样式 */
+.adverPhoto{
+  background-color: #f4f4f4;
+  padding-top:15px;
+}
+.adverPhoto image{
+  width:100%;
+  height:60rpx;
+}
+.listPhotoAll{
+  display: flex;
+  justify-content: space-between;
+  padding:5px;
+}
+.listPhotoAll image{
+  height:200rpx;
+  width:100%;
+}
+.listPhotoAll .firstPhoto image:first-child{
+  height: 412rpx;
+}
+.firstPhoto{
+  width:32%;
+}
+.secondPhoto{
+  width:67%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.listPhoto{
+  width:48%;
 }
