@@ -1,18 +1,31 @@
 // pages/category/index.js
+import request from '../../utils/request.js'
 Page({
-
+  handleShow(event){
+    this.setData({
+      current: event.currentTarget.dataset.index
+    })
+  },
   /**
    * 页面的初始数据
    */
   data: {
-
+    shopList:[],
+    current:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    request({
+      url:"/api/public/v1/categories"
+    }).then(res=>{
+      const {message} = res.data;
+      this.setData({
+        shopList: message
+      })
+    })
   },
 
   /**

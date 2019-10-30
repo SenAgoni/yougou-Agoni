@@ -1,9 +1,33 @@
 <!--pages/category/index.wxml-->
-<!-- 头部搜索框部分 -->
-<view class="container">
-  <view class="header">
-    <icon class="iconfont iconsearch ico"></icon>
-    <input placeholder="搜索"></input>
-  </view>
+<!-- 主体内容部分 tab栏部分 -->
+<search/>
+<view class="containerTab">
+  <!-- 左侧 -->
+  <view class="containerTabs">
+      <view class="menu">
+        <view wx:for="{{shopList}}" class="navbar {{index==current?'tabClick':''}}" wx:key="{{index}}" bindtap="handleShow" data-index="{{index}}">
+          <text class="navbartxt">{{item.cat_name}}</text>
+        </view>
+      </view>
+      <view class="list">
+        <view wx:for="{{shopList[current].children}}" wx:key="{{index}}">
+            <view class="containTab">
+                <view class="headerPhoto">
+                  <image  mode="aspectFill"  src="https://aecpm.alicdn.com/simba/img/TB1XotJXQfb_uJkSnhJSuvdDVXa.jpg"></image>
+                  <view class="text">
+                    <text>/{{item.cat_name}}/</text>
+                  </view>
+                </view>
+                <view class="shoplist">
+                  <view class="tabList" wx:for="{{item.children}}" wx:key="{{index}}">
+                    <image src="{{item.cat_icon}}"></image>
+                    <view>
+                      <text>{{item.cat_name}}</text>
+                    </view>
+                  </view>
+                </view>
+            </view>
+            </view>
+        </view>
+      </view>
 </view>
-<!-- 主体内容部分 -->

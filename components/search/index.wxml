@@ -1,0 +1,8 @@
+<!--components/search/index.wxml-->
+<!-- 头部搜索框部分 -->
+<view class="search">
+  <view class="header">
+    <icon type="search" size="20" color="#ddd"></icon>
+    <text>搜索</text>
+  </view>
+</view>

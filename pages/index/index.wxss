@@ -1,24 +1,5 @@
 /**index.wxss**/
-/* 头部部分样式 */
-.search{
-  height: 70rpx;
-  background-color: #eb4450;
-  padding:5px;
-}
-.header{
-  height:60rpx;
-  background-color: #fff;
-  color:#ccc;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header icon{
-  font-size:40rpx;
-  margin-right:5px;
-  margin-top:-4px;
-}
+
 /* 轮播图部分样式 */
 .swiper-container image{
   width:100%;
@@ -33,8 +14,8 @@
   margin-bottom:15px;
 }
 .navPhotoAll .navPhoto navigator image{
-  width:110rpx;
-  height:130rpx;
+  width:128rpx;
+  height:140rpx;
 }
 /* 时尚女装部分样式 */
 .adverPhoto{

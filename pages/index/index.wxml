@@ -1,12 +1,6 @@
 <!--index.wxml-->
-<!-- 头部搜索框部分 -->
-<view class="container">
-  <view class="search">
-     <view class="header">
-        <icon class="iconfont iconsearch"></icon>
-        搜索
-      </view>
-  </view>
+<view>
+  <search/>
   <!-- 轮播图部分 -->
   <view class="swiper-container">
     <swiper indicator-dots="true"
@@ -32,13 +26,11 @@
   <view wx:for="{{backgroundImg}}"
         wx:key="{{index}}">
     <view class="adverPhoto">
-      <navigator url="#" hover-class="navigator-hover">
           <image mode="aspectFill" src="{{item.floor_title.image_src}}"></image>
-      </navigator>
     </view>
     <view class="listPhotoAll">
       <view class="firstPhoto">
-        <navigator url="#" hover-class="navigator-hover">
+        <navigator url="{{item.product_list[0].navigator_url}}" hover-class="navigator-hover">
             <image mode="aspectFill" src="{{item.product_list[0].image_src}}"></image>
         </navigator>
       </view>
@@ -47,7 +39,7 @@
         wx:key="{{index}}"
         wx:if="{{index>0}}"
         >
-        <navigator url="#" hover-class="navigator-hover">
+        <navigator url="{{item.navigator_url}}" hover-class="navigator-hover">
           <image src="{{item.image_src}}"></image>
         </navigator>
         </view>
