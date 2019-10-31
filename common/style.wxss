@@ -14,7 +14,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.iconxiaoxi:before {
+  content: "\e603";
+}
 
+.iconwode:before {
+  content: "\e604";
+}
+
+.iconshouji:before {
+  content: "\e605";
+}
+
+.iconbofang:before {
+  content: "\e606";
+}
 .iconwode:before {
   content: "\e62e";
 }

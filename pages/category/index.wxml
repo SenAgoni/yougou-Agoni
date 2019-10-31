@@ -18,14 +18,16 @@
                     <text>/{{item.cat_name}}/</text>
                   </view>
                 </view>
-                <view class="shoplist">
-                  <view class="tabList" wx:for="{{item.children}}" wx:key="{{index}}">
-                    <image src="{{item.cat_icon}}"></image>
-                    <view>
-                      <text>{{item.cat_name}}</text>
+                  <view class="shoplist">
+                    <view class="tabList" wx:for="{{item.children}}" wx:key="{{index}}">
+                      <navigator url="/pages/goods_list/index?query={{item.cat_name}}">
+                        <image src="{{item.cat_icon}}"></image>
+                        <view>
+                          <text>{{item.cat_name}}</text>
+                        </view>
+                      </navigator>
                     </view>
                   </view>
-                </view>
             </view>
             </view>
         </view>

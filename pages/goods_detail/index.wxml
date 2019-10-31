@@ -1,0 +1,51 @@
+<!--pages/goods_detail/index.wxml-->
+<!-- 头部轮播图部分 -->
+<view>
+  <swiper class="header-image" indicator-dots="true" indicator-color="rgba(0,0,0,.3)"
+  indicator-active-color="rgba(255,255,255,.7)"
+      autoplay="true" interval="2000">
+      <block wx:for="{{goodsDetail.pics}}" wx:key="{{index}}">
+        <swiper-item>
+          <image  mode="aspectFill" src="{{item.pics_big}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
+<!-- 内容商品详情部分  -->
+<view class="container">
+  <!-- 价格部分 -->
+  <view class="price">￥{{goodsDetail.goods_price}}</view>
+  <view class="detail">
+    <view class="goods-detail">
+      {{goodsDetail.goods_name}}
+    </view>
+    <view class="goods-star">
+      <icon class="iconfont iconshoucang"></icon>
+      <view>收藏</view>
+    </view>
+  </view>
+  <view class="express">
+    <text>快递:</text>
+    <text class="free">免运费</text>
+  </view>
+</view>
+<!-- 间隔部分 -->
+<view class="interval"></view>
+<!-- 促销活动部分 -->
+<view class="sales">
+  <text class="sales-speed">促销</text>
+  <text class="sales-detail">满300减30元</text>
+</view>
+<!-- 页面底部部分 -->
+<view class="footer">
+    <view class="phone">
+      <icon class="iconfont iconwode"></icon>
+      <view>联系客服</view>
+    </view>
+    <view class="cart">
+      <image src="../../images/icon_cart@3x.png"></image>
+      <view>购物车</view>
+    </view>
+    <view class="add-cart">加入购物车</view>
+    <view class="now-buy">立即购买</view>
+</view>

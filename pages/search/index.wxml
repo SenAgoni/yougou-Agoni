@@ -1,0 +1,6 @@
+<!--pages/search/index.wxml-->
+<view class="">
+  <searchInput/>
+  <!-- 取消按钮部分 -->
+  <button>取消</button>
+</view>
