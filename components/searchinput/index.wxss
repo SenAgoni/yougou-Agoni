@@ -1,0 +1,22 @@
+/* components/searchinput/index.wxss */
+.header{
+  background-color: #efefef;
+  height:80rpx;
+  padding:10rpx;
+  display: flex;
+  align-items: center;
+}
+.header .search{
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  padding:10rpx 20rpx;
+  border-radius: 4px;
+}
+.header .search icon{
+  margin-right: 10rpx;
+}
+.header .search input::placeholder{
+  font-size:14px;
+}

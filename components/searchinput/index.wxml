@@ -1,0 +1,8 @@
+<!--components/searchinput/index.wxml-->
+<view class="header">
+  <view class="search">
+    <icon type="search" size="18"></icon>
+    <input placeholder="请输入你想要的商品"></input>
+  </view>
+</view>
+

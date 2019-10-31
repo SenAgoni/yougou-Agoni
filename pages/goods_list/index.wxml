@@ -1,0 +1,27 @@
+<!--pages/search/index.wxml-->
+<!-- 搜索框部分 -->
+<searchInput/>
+<view class="container">
+<!-- 筛选条件部分 -->
+  <view class="filter">
+    <view class="active">综合</view>
+    <view>销量</view>
+    <view>价格</view>
+  </view>
+  <!-- 商品列表部分 -->
+  <view wx:for="{{shopLists}}" wx:key="{{index}}">
+    <navigator url="">
+      <view class="shopList">
+          <view class="image-lift">
+            <image src="https://img.alicdn.com/imgextra/i1/113462038/TB2S38YoSVmpuFjSZFFXXcZApXa-113462038.jpg_240x240q95.jpg"></image>
+          </view>
+          <view class="text-right">
+            <view class="desc-shop">
+              {{item.goods_name}}
+            </view>
+            <view class="price">￥<text>{{item.goods_price}}</text>.00</view>
+          </view>
+        </view>
+    </navigator>
+  </view>
+</view>

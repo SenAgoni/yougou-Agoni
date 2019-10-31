@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "searchInput":"../../components/searchinput/index"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ff2d4a",
+  "navigationBarTitleText": "搜索",
+  "navigationBarTextStyle": "white"
+}
