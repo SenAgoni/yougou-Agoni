@@ -1,0 +1,16 @@
+/* pages/cart/index.wxss */
+page{
+  background-color:#f4f4f4;
+}
+.header-filter{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.active{
+  color:#eb4855;
+  border-bottom:4px solid #eb4855;
+}
+.filter{
+  padding:35rpx;
+}

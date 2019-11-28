@@ -1,0 +1,6 @@
+<!--pages/cart/index.wxml-->
+<!-- 头部筛选部分 -->
+<view class="header-filter">
+  <view class="filter {{current===index?'active':''}}" wx:for="{{filter}}" wx:key="{{index}}">{{item}}</view>
+</view>
+<!--  -->

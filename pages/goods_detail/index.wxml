@@ -53,7 +53,7 @@
           <view>购物车</view>
         </view>
       </navigator>
-      <view class="add-cart">加入购物车</view>
+        <view class="add-cart" bindtap="handleAddCart" data-id="{{goodsDetail.goods_id}}">加入购物车</view>
       <view class="now-buy">立即购买</view>
   </view>
 </view>

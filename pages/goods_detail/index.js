@@ -8,6 +8,7 @@ Page({
   data: {
     goods_id:0,
     goodsDetail:{},
+    goodsCart:[],
   },
 
   /**
@@ -30,14 +31,43 @@ Page({
       })
     })
   },
+  handleAddCart(event){
+    // 点击添加到购物车时，就要把数据存到本地存储
+    let obj = wx.getStorageSync("goods")||{};
+    const {id} = event.target.dataset;
+    let goods_number = 1;
+    // 先把我们需要的数据给解构出来，然后再添加
+    const { goods_id, goods_name, goods_price, goods_small_logo} = this.data.goodsDetail;
+    // 先取后存，但是如果前面已经添加过了，那就直接把那个商品的数量添加1；所以要在这里去遍历,利用goods_id去判断
+   
+   if(Object.keys(obj).length>0){
+     Object.keys(obj).map(v => {
+       if (id==obj[v].goods_id) {
+         // 数量加一
+         goods_number = goods_number + 1;
+       }
+     })
+   }
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    // 先构造一个对象
+    obj[goods_id] = {
+      goods_id,
+      goods_name,
+      goods_price,
+      goods_small_logo,
+      // 先给一个默认的数值
+      goods_number,
+      selected: true,
+    }
+    console.log(obj);
+    // 然后存到本地存储
+    wx.setStorageSync("goods", obj)
+    // 在给用户一个提示，已经添加到购物车了
+    wx.showToast({
+      title: '已添加',
+      icon:"success"
+    })
   },
-
   /**
    * 生命周期函数--监听页面显示
    */

@@ -1,0 +1,6 @@
+
+<button open-type="getUserInfo" 
+  type="primary" 
+  style="margin:50rpx auto;width:600rpx;"
+  bindgetuserinfo="handleAuth"
+>授权登录</button>

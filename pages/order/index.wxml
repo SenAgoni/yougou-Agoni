@@ -1,0 +1,70 @@
+<!-- 订单页面 -->
+<!-- 获取收货地址部分 -->
+<view class="address">
+ <view class="get-address" wx:if="{{!address}}" bindtap="handleAddress">
+    <view>获取收货地址</view>
+    <view class="arrow"></view>
+  </view>
+  <view class="cart-header" wx:if="{{address}}">
+    <view class="delivery">
+      <view class="delivery-user">
+        收货人：<text>{{address.userName}}</text>
+      </view>
+      <view class="delivery-phone">
+        <text>{{address.telNumber}}</text>
+        <view class="arrow"></view>
+      </view>
+    </view>
+    <!-- 收货地址部分 -->
+    <view>收货地址：{{address.provinceName}}{{item.cityName}}{{address.countyName}}{{address.detailInfo}}</view>
+  </view>
+</view> 
+<!-- 中间的分割线 -->
+<view class="blank">
+  <image class="bar-image" src="../../images/cart_border@2x.png"></image>
+</view>
+<!-- 商品列表 -->
+<!-- 左侧图片部分 -->
+
+<view>
+      <view class="shoplist" 
+      wx:if="{{goodsCart}}" 
+      wx:for="{{goodsCart}}" 
+      wx:key="{{index}}">
+        <view class="shoplist-icon">
+         <icon type="success" 
+         color="{{item.selected?'red':'gray'}}"
+         bindtap="handleSelect" 
+         data-id="{{item.goods_id}}"
+         size="18" ></icon>
+        </view>
+        <view class="shoplist-detail">
+            <view class="shoplist-detail-image">  
+                <image mode="aspectFill"
+src="{{item.goods_small_logo}}"></image>
+            </view>
+            <view class="shoplist-detail-right">
+                <view class="shoplist-detail-desc">
+                  <text>{{item.goods_name}}</text>
+                </view>
+                <view class="shoplist-detail-price">
+                    <text><text class="price">￥</text>{{item.goods_price}}.00</text>
+                    <view>×{{allNum}} 件</view>
+                </view>
+            </view>
+        </view>
+      </view>
+ </view>
+
+ <!-- 底部部分 -->
+ <view class="footer">
+    <!-- 合计部分 -->
+    <view class="add-all">
+      <view class="price-text">
+          <text>合计：</text>
+          <text class="price">￥{{allPrice}}.00</text>
+      </view>
+      <text class="express">包含运费</text>
+    </view>
+    <view class="computed" style="width:400rpx;" bindtap="handleOrder"> 立即支付</view>
+</view>

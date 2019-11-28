@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.0",
-	"appid": "wx162f95a0ad0ece99",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "horseDarkYouGou",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -48,9 +48,9 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/cart/index",
-					"pathName": "pages/cart/index",
-					"query": "goods_id=19957",
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "goods_id=4550",
 					"scene": null
 				}
 			]

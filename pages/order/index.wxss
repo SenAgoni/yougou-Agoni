@@ -1,43 +1,9 @@
-/* 整个页面的底色 */
-page{
-  background-color: #f4f4f4;
-}
-/* 空购物车的样式 */
-.containers{
-  width:400rpx;
-  height:400rpx;
-  margin:150rpx auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.containers image{
-  width:180rpx;
-  height: 180rpx;
-  margin-bottom:30rpx;
-  font-size:15px;
-  color:#999;
-}
-/* 购物车列表部分 */
-/* 手动点击获取收货地址 */
+/* pages/order/index.wxss */
 .get-address{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding:20rpx;
-}
-.arrow{
-  width:20rpx;
-  height: 20rpx;
-  border-top:1px solid #999;
-  border-right:1px solid #999;
-  transform: rotate(60deg);
-  margin-right:10rpx;
-}
-/* 头部收件人部分 */
-.cart-bar{
-   background-color: #fff;
 }
 .cart-header{
   font-size:14px;
@@ -59,7 +25,6 @@ page{
 .delivery-user text,.delivery-phone .arrow{
   margin-left:35rpx;
 }
-/* 导航条部分 */
 .bar-image{
   display: block;
   width:100%;
@@ -68,7 +33,6 @@ page{
 .blank{
   margin-bottom: 25rpx;
 }
-/* 购物车列表 */
 .cart-shop{
   background-color: #fff;
   margin-bottom: 150rpx;
